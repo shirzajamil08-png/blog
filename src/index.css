@@ -1,0 +1,186 @@
+.box{
+  z-index: 1;
+}
+.animated-border-box {
+  position: relative;
+  overflow: hidden; 
+  border-radius: 10px;
+}
+
+.animated-border-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, red, orange, yellow, green, blue, indigo, violet, red);
+  animation: rotateGradient 4s linear infinite;
+  z-index: -1;
+}
+
+.animated-border-box::after {
+  content: '';
+  position: absolute;
+  top: 2px; 
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: linear-gradient(-50deg,  #ac1f57, #ea74a1, #cb54b7, #b741c4) !important;
+  border-radius: 8px; 
+}
+
+@keyframes rotateGradient {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+a{
+  text-decoration: none;
+}
+body {
+	background: linear-gradient(-45deg, #d160be, #cf316d, #e55c95, #f7a76e);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h2{
+  z-index: 1;
+}
+form{
+  z-index: 1;
+}
+button{
+  border-style: none;
+  border-radius: 20px;
+}
+input{
+  border-radius: 20px;
+  padding: 10px 10px;
+  border-style: none;
+  outline: none;
+}
+
+
+.image{
+  height: 70vh;
+  width: 100%;
+  background-image: url('./blog.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  color: rgb(18, 19, 2);
+  font-size: 70px;
+  font-weight: bolder;
+  letter-spacing: 3px;
+}
+.boxer{
+  width: 100%;
+  border: 1px solid zinc;
+  display: flex;
+  margin-top: 30px;
+  gap: 40px;
+  padding-bottom: 80px !important;
+}
+.categories{
+  border: 1px solid wheat;
+  width: 20%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.createblog{
+  border-radius: 10px;
+  background-color: pink;
+  padding: 10px!important;
+  color: black;
+  width: 100%;
+}
+table{
+  display: flex;
+  flex-direction: column;
+}
+thead{
+  display: flex;
+  flex-direction: column;
+}
+tr{
+  border: 1px solid wheat;
+  padding: 10px;
+}
+tbody{
+  display: flex;
+  flex-direction: column;
+}
+
+.box{
+  margin: 50px 100px;
+}
+.box>img{
+  height: 60vh;
+  width: 100%;
+  object-fit: cover;
+}
+.box>form{
+  margin-top: 10px;
+  display: flex;
+}
+.box>form>label>i{
+  font-size: larger;
+  color: gray;
+}
+.box>form>input{
+  display: none ;
+}
+.Title{
+  flex: 1;
+  margin: 0px 30px;
+
+}
+
+textarea{
+  width: 100%;
+  margin-top: 50px;
+  font-size: 18px;
+  &:focus-visible{
+    outline: none;
+  }
+}
+.posts{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.post-card{
+  width: 30%;
+  border: 1px solid white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
